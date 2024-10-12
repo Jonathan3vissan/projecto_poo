@@ -6,4 +6,4 @@ crear un programa que permita que una peluqueria pueda resrvar turnos y que pued
 
 #DEBE tener un recordatorio de turn que deba validar sus asistencia un dia antes y el utlimo 3 horas antes de la reserva 
 # projecto_poo
-# projecto_poo
+
