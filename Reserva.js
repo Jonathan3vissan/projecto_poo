@@ -27,11 +27,11 @@ class Reserva {
      */
     tomarDatosParaReservaDe(usuario, agenda) {
         let datosRecibidos = "def";
-        datosRecibidos = usuario.enviarDatosA();
+        datosRecibidos = usuario.enviarDatos();
         datosRecibidos.IDreserva = this.generadorID();
         datosRecibidos.fecha = this.getFecha();
         datosRecibidos.hora = this.getHora();
-        agenda.agregarAgenda(datosRecibidos)
+        agenda.agregarAgendaCon(datosRecibidos)
     }
 
     /**

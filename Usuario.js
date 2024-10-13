@@ -26,9 +26,9 @@ class Usuario {
         return this.#telefono
     }
 /**
- * @returns envair los dato del usuario
+ * @returns envia los dato del usuario
  */
-    enviarDatosA() {
+    enviarDatos() {
         const nuevoReserva = {
             nombre: this.#nombre,
             mail: this.#mail,
@@ -39,5 +39,7 @@ class Usuario {
         }
         return nuevoReserva
     }
+
+    
 }
 module.exports = Usuario;
