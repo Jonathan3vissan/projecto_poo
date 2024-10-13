@@ -1,37 +1,50 @@
-const Agenda = require("./Agenda");
-
 class Reserva {
-    #fecha = "def fecha";
-    #hora = "def hora"
-
+    #reserva = [];
+    #fecha = "";
+    #hora = "";
     constructor(fecha, hora) {
         this.#fecha = fecha;
         this.#hora = hora
     }
     /**
-     * @returns fecha de la reserva
+     * @returns las reservas
+     */
+    getReservas() {
+        return this.#reserva
+    }
+    /**
+     * @returns la fecha  
      */
     getFecha() {
         return this.#fecha
     }
-    /**
-     * @returns la hora de la reserva 
-     */
     getHora() {
         return this.#hora
     }
 
     /**
-     * ingresa la reserva del usuario al sistema de agenda
-     * @param {agenda} agenda 
-     * @param {String} nombre 
-     * @param {String} mail 
+     * solicitado los datos para iniciar la reserva
      */
-    turnoEn(agenda, nombre, mail) {
-        agenda.agendarTurno(nombre, mail, this.#fecha, this.#hora)
+    tomarDatosParaReservaDe(usuario, agenda) {
+        let datosRecibidos = "def";
+        datosRecibidos = usuario.enviarDatosA();
+        datosRecibidos.IDreserva = this.generadorID();
+        datosRecibidos.fecha = this.getFecha();
+        datosRecibidos.hora = this.getHora();
+        agenda.agregarAgenda(datosRecibidos)
+    }
 
+    /**
+     * @returns un identificar unico para usuario
+     */
+    generadorID() {
+        const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        const letra = caracteres.charAt(Math.floor(Math.random() * caracteres.length));
+        const numero = Math.floor(Math.random() * 900) + 100;
+        const clave = letra + numero;
+        return clave;
     }
 
 
 }
-module.exports = Reserva;
+module.exports = Reserva
