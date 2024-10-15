@@ -34,17 +34,7 @@ class Reserva {
         agenda.agregarAgendaCon(datosRecibidos)
     }
 
-    /**
-     * @returns un identificar unico para usuario
-     */
-    generadorID() {
-        const caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-        const letra = caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-        const numero = Math.floor(Math.random() * 900) + 100;
-        const clave = letra + numero;
-        return clave;
-    }
-
+ 
 
 }
 module.exports = Reserva

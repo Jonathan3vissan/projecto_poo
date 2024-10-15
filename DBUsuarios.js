@@ -1,5 +1,5 @@
 const fs = require('fs');
-class RegistrosUsuarios {
+class DBUsuario {
     #nuevoRegistro = [];
     #direccionArchivo = path.join(__dirname, './usuarioRegistro/registros.txt')
 
@@ -39,4 +39,4 @@ class RegistrosUsuarios {
 
 
 }
-module.exports = RegistrosUsuarios;
+module.exports = DBUsuario;

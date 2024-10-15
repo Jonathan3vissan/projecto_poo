@@ -28,17 +28,7 @@ class Usuario {
 /**
  * @returns envia los dato del usuario
  */
-    enviarDatos() {
-        const nuevoReserva = {
-            nombre: this.#nombre,
-            mail: this.#mail,
-            telefono: this.#telefono,
-            IDreserva: "",
-            fecha: "",
-            hora: "",
-        }
-        return nuevoReserva
-    }
+  
 
     
 }
