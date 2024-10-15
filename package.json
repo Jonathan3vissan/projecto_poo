@@ -1,0 +1,11 @@
+{
+  "name": "projecto_poo",
+  "version": "1.0.0",
+  "description": "crear un programa que permita que una peluqueria pueda hacer reservar de turnos y que pueda realizar el pago con billeteras virtuales",
+  "main": "Agenda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

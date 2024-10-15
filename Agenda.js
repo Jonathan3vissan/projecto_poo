@@ -2,12 +2,16 @@ class Agenda {
     #agendados = [];
     #reservasCanceladas = [];
 
+    getAgendados() {
+        return this.#agendados
+    }
+
     /**
      * agrega la reserva a la angenda
      * @param {datos} datosRecibidos 
      */
     agregarAgendaCon(datosRecibidos) {
-        angendados.push()
+        this.#agendados.push(datosRecibidos)
     }
     /**
      * busca el id de la reserva ingresado en el array y si es encontrado lo elimina y guarda los datos de la reserva cancelada en otro array
@@ -20,7 +24,7 @@ class Agenda {
                 this.#reservasCanceladas.push(this.#agendados[i]);
                 this.#agendados[i].splice(i, 1);
                 console.log("Reserva eliminada exitosamente");
-                this.#agendados[i] = "x";
+               // this.#agendados[i].pus("x");
             } else {
                 console.log("verifique el ID nuevamente, nose puedo encontrar el ID ingresado");
             }
@@ -29,4 +33,4 @@ class Agenda {
 
 
 }
-module.exports = Agenda
+module.exports = Agenda;
