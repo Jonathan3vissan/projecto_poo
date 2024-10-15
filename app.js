@@ -1,13 +1,19 @@
-const Agenda = require("./Agenda");
+const Cliente = require("./Cliente");
 const DBUsuario = require("./DBUsuarios");
-const Reserva = require("./Reserva");
-const Usuario = require("./Usuario");
 
-const usuario = new Usuario("juna", "mail@got", "12356");
-const reserva = new Reserva();
-const agenda = new Agenda();
+const usuario = new Cliente("juna", "mail@got", "12356");
 const DB = new DBUsuario()
-console.log(DB.generadorID());
+
+
+console.log("este muestras metodo db \n",DB.agregarResgistroDe(usuario));
+console.log(usuario.getIDCliente(),"\n");
+console.log(usuario.getNombre()); //hastqa funciona que moficque el idcliente y  se lo agrege al obejto a guardar en la txt
+
+
+
+
+
+
 
 
 

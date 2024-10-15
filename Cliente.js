@@ -13,15 +13,20 @@ class Cliente extends Usuario {
      * @returns envia el cliente
      */
     enviarInforamcionA() {
-        return this
+        const NUEVO_CLIENTE = {
+            NOMBRE: this.getNombre(),
+            mail: this.getMail(),
+            telefono: this.getTelefono(),
+        }
+        return NUEVO_CLIENTE
     }
 
     /**
      * modifica el id, asignandole un id unico
-     * @param {*} registro 
+     * @param {*} registroID 
      */
-IDmodifCleinteCom(registro){
-    this.#IDcliente=registro
-}
+    modificarIDClienteCon(registroID) {
+        this.#IDcliente = registroID
+    }
 }
 module.exports = Cliente;

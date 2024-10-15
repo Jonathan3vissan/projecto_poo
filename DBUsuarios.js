@@ -1,51 +1,41 @@
 const fs = require('fs');
 class DBUsuario {
     #nuevoRegistro = [];
-    #direccionArchivo = path.join(__dirname, './usuarioRegistro/registros.txt')
+    #IDRegistro = "def ID"
 
     /**
-     * direccion donde se guarda el archivo txt 
+     * @returns ID generado para el registro de  cliente
      */
-    getDireccionArchivo() {
-        return this.#direccionArchivo
+    getIDRegistro() {
+        return this.#IDRegistro
     }
+
     /**
      * agrega el registro del cleinte a  un txt
      * @param {*} cliente 
      */
+
     agregarResgistroDe(cliente) {
-        let datosRecibidos = "def";
-        datosRecibidos=cliente.enviarInforamcionA()
+        let dato = "def";
+        let idGenerado = "def id db"
+        idGenerado = this.generadorID()
+        dato = cliente.enviarInforamcionA()
+        cliente.modificarIDClienteCon(idGenerado)
+        dato.IDCliente = idGenerado
+        return dato
 
-
-       
     }
-
-
- /**
-     * @returns un identificar unico
-     */
- generadorID() {
-    const idUnico = crypto.randomUUID();
-    console.log("ID único generado:", idUnico);
-    return idUnico
-    }
-
 
 
     /**
-     * crea un archivo txt donde se guarda la info de los usuario que ya esta registrados
-     * @param {String} datos a ingresar en el archivo
-     */
-    guardarDatosTXTDe(datos) {
-        fs.appendFile(this.getDireccionArchivo(), datos + '\n', (err) => {
-            if (err) {
-                console.error('Error al agregar datos:', err);
-            } else {
-                console.log('Datos agregados correctamente.');
-            }
-        });
+        * @returns un identificar unico
+        */
+    generadorID() {
+        const idUnico = crypto.randomUUID();
+        console.log("ID único generado:", idUnico);
+        return idUnico
     }
+
 
 
 
