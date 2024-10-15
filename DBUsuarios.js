@@ -15,9 +15,20 @@ class DBUsuario {
      */
     agregarResgistroDe(cliente) {
         let datosRecibidos = "def";
-        datosRecibidos = cliente.enviarDatos()
-        this.#nuevoRegistro.push(datosRecibidos)
-        this.guardarDatosTXTDe(datosRecibidos)
+        datosRecibidos=cliente.enviarInforamcionA()
+
+
+       
+    }
+
+
+ /**
+     * @returns un identificar unico
+     */
+ generadorID() {
+    const idUnico = crypto.randomUUID();
+    console.log("ID único generado:", idUnico);
+    return idUnico
     }
 
 

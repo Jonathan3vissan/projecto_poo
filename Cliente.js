@@ -1,28 +1,27 @@
 const Usuario = require("./Usuario");
+class Cliente extends Usuario {
+    #IDcliente = "def IDcliente"
 
-class Cliente  extends Usuario{
-#IDcliente="def IDcliente"
-
-
-/**
- * @returns el id del cliente
- */
-getIDCliente(){
-    return this.#IDcliente
-}
-
-
- /**
-     * @returns un identificar unico para usuario
+    /**
+     * @returns el id del cliente
      */
- generadorID() {
-const idUnico = crypto.randomUUID();
-console.log("ID único generado:", idUnico);
+    getIDCliente() {
+        return this.#IDcliente
+    }
 
-return idUnico
+    /**
+     * @returns envia el cliente
+     */
+    enviarInforamcionA() {
+        return this
+    }
+
+    /**
+     * modifica el id, asignandole un id unico
+     * @param {*} registro 
+     */
+IDmodifCleinteCom(registro){
+    this.#IDcliente=registro
 }
-
-
-
 }
-module.exports=Cliente;
+module.exports = Cliente;
