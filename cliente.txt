@@ -1,0 +1,2 @@
+{"NOMBRE":"juan","mail":"mail@got","telefono":"12356","IDCliente":"104649b3-bfb3-457e-ba88-bd3747240fd5"}
+{"NOMBRE":"juan","mail":"mail@got","telefono":"12356","IDCliente":"a1df3a05-210f-4bc1-b1de-0755a5e89af7"}

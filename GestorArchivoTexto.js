@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 class GestorArchivoTexto {
-    constructor(nombreArchivo) {
+    constructor(nombreArchivo="cliente.txt") {
         this.nombreArchivo = nombreArchivo;
         this.rutaArchivo = path.join(__dirname, this.nombreArchivo);
     }
@@ -37,7 +37,7 @@ class GestorArchivoTexto {
         });
     }
 
-    
+
     /**
      * 
      * @returns  crear el archivo
@@ -56,6 +56,4 @@ class GestorArchivoTexto {
     }
 }
 
-// Uso de la clase
-const gestorArchivo = new GestorArchivoTexto('archivo.txt');
-gestorArchivo.agregarContenido('Esta es una nueva línea de texto.');
+module.exports = GestorArchivoTexto

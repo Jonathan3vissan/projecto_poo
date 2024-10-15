@@ -1,29 +1,34 @@
 const fs = require('fs');
 class DBUsuario {
     #nuevoRegistro = [];
-    #IDRegistro = "def ID"
 
     /**
      * @returns ID generado para el registro de  cliente
      */
-    getIDRegistro() {
-        return this.#IDRegistro
+    getNuevoRegistro() {
+        return this.#nuevoRegistro
     }
 
-    /**
-     * agrega el registro del cleinte a  un txt
-     * @param {*} cliente 
-     */
 
-    agregarResgistroDe(cliente) {
+
+    /**
+     * agrega al cliente el ID generado para ser indentificado 
+     * @param {*} cliente sus datos
+     * @returns cliente con IDmodifacado
+     */
+    completarInfoCliente(cliente) {
         let dato = "def";
         let idGenerado = "def id db"
         idGenerado = this.generadorID()
-        dato = cliente.enviarInforamcionA()
         cliente.modificarIDClienteCon(idGenerado)
-        dato.IDCliente = idGenerado
+        dato = cliente.enviarInforamcionA()
+        this.#nuevoRegistro.push(dato)
         return dato
+    }
 
+    enviarDatosClienteA(gestioArchivo) {
+        const contenido = this.#nuevoRegistro.map(registro => JSON.stringify(registro)).join('\n');
+        gestioArchivo.agregarContenido(contenido);
     }
 
 

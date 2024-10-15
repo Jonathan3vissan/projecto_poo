@@ -17,6 +17,7 @@ class Cliente extends Usuario {
             NOMBRE: this.getNombre(),
             mail: this.getMail(),
             telefono: this.getTelefono(),
+            IDCliente: this.getIDCliente()
         }
         return NUEVO_CLIENTE
     }
