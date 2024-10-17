@@ -22,6 +22,7 @@ class DBUsuario {
         idGenerado = this.generadorID()
         cliente.modificarIDClienteCon(idGenerado)
         dato = cliente.enviarInforamcionA()
+        
         this.#nuevoRegistro.push(dato)
         return dato
     }

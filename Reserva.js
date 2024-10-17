@@ -34,7 +34,17 @@ class Reserva {
         agenda.agregarAgendaCon(datosRecibidos)
     }
 
- 
+
+
+
+    /**
+     * regsitra la hora en que se realizo la reserva no la la hora de cita de la reserva
+     * @returns la hora en que fue regsitrada la toma de la reserva 
+     */
+    tomarHoraDelSistema() {
+        const fechaActual = new Date();
+        return fechaActual
+    }
 
 }
 module.exports = Reserva
