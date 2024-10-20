@@ -13,21 +13,18 @@ class Cliente {
     getNombre() {
         return this.#nombre
     }
-
     /**
      * @returns mail del cliente
      */
     getMail() {
         return this.#mail
     }
-
     /**
      * @returns telefono del cliente
      */
     getTelefono() {
         return this.#telefono
     }
-
     /**
      * @returns datos del cliente
      */
