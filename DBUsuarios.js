@@ -16,7 +16,7 @@ class DBUsuario {
      * @param {*} cliente sus datos
      * @returns cliente con IDmodifacado
      */
-    completarInfoCliente(cliente) {
+    agregarIDClienteA(cliente) {
         let dato = "def";
         let idGenerado = "def id db"
         idGenerado = this.generadorID()
@@ -27,9 +27,13 @@ class DBUsuario {
         return dato
     }
 
-    enviarDatosClienteA(gestioArchivo) {
+    /**
+     * envia todos los datos del cliente para que sea guardados en una base de datos
+     * @param {*} gestionArchivo 
+     */
+    enviarDatosClienteA(gestionArchivo) {
         const contenido = this.#nuevoRegistro.map(registro => JSON.stringify(registro)).join('\n');
-        gestioArchivo.agregarContenido(contenido);
+        gestionArchivo.agregarContenido(contenido);
     }
 
 

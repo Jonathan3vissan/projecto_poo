@@ -22,11 +22,11 @@ class Agenda {
         for (let i = 0; i < this.#agendados.length; i++) {
             if (this.#agendados[i].IDreserva === eliminarID) {
                 this.#reservasCanceladas.push(this.#agendados[i]);
-                this.#agendados[i].splice(i, 1);
+                //this.#agendados[i].splice(i, 1);
+                this.#agendados[i] = "x";
                 console.log("Reserva eliminada exitosamente");
-               // this.#agendados[i].pus("x");
             } else {
-                console.log("verifique el ID nuevamente, nose puedo encontrar el ID ingresado");
+                console.log("verifique el ID nuevamente, nose pudo encontrar el ID ingresado");
             }
         }
     }
