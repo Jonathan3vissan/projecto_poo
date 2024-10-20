@@ -6,7 +6,7 @@ class GeneradorID {
      * @returns ID generado
      */
     getID() {
-        return this.#ID
+        return this.#ID = this.generarHash()
     }
     /**
      *@returns  hash de tamanio de 10 caracteres
@@ -16,7 +16,7 @@ class GeneradorID {
         const hash = crypto.createHash('sha256');
         hash.update(randomInput);
         const fullHash = hash.digest('hex');
-        return this.#ID = fullHash.substring(0, this.#tamanioID);
+        return fullHash.substring(0, this.#tamanioID);
     }
 }
 module.exports = GeneradorID;

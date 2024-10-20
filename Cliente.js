@@ -2,7 +2,6 @@ class Cliente {
     #nombre = "def nombre";
     #mail = "def mail";
     #telefono = "def telefono";
-    #IDCliente = "def ID cliente"
     constructor(nombre, mail, telefono) {
         this.#nombre = nombre;
         this.#mail = mail;
@@ -29,6 +28,16 @@ class Cliente {
         return this.#telefono
     }
 
-
+    /**
+     * @returns datos del cliente
+     */
+    enviarInfoCliente() {
+        const NUEVO_CLIENTE = {
+            Nombre: this.#nombre,
+            Mail: this.#mail,
+            Telefono: this.#telefono,
+        }
+        return NUEVO_CLIENTE
+    }
 }
 module.exports = Cliente; 
