@@ -1,0 +1,6 @@
+{"NOMBRE":"juan","mail":"mail@got","telefono":"12356","IDCliente":"b3493c1e-ec0c-4ebd-8292-ba15d0a7e96c"}
+{"NOMBRE":"esteban","mail":"ete@pintor","telefono":"456789123","IDCliente":"555a67c2-7220-445c-a14f-bb7e7bc1581a"}
+{"NOMBRE":"juan","mail":"mail@got","telefono":"12356","IDCliente":"217703c1-3b38-4ddf-8cd4-39f4b58a5df8"}
+{"NOMBRE":"esteban","mail":"ete@pintor","telefono":"456789123","IDCliente":"ec87c502-29ce-421d-b809-e90e83105aa5"}
+{"NOMBRE":"juan","mail":"mail@got","telefono":"12356","IDCliente":"f6bee643-bb57-48e2-9a83-e9233b6672a6"}
+{"NOMBRE":"esteban","mail":"ete@pintor","telefono":"456789123","IDCliente":"ba2210af-1144-45f8-97a9-571c754b2396"}

@@ -22,7 +22,7 @@ class DBUsuario {
         idGenerado = this.generadorID()
         cliente.modificarIDClienteCon(idGenerado)
         dato = cliente.enviarInforamcionA()
-        
+
         this.#nuevoRegistro.push(dato)
         return dato
     }
@@ -32,8 +32,14 @@ class DBUsuario {
      * @param {*} gestionArchivo 
      */
     enviarDatosClienteA(gestionArchivo) {
-        const contenido = this.#nuevoRegistro.map(registro => JSON.stringify(registro)).join('\n');
-        gestionArchivo.agregarContenido(contenido);
+        try {
+            const contenido = this.#nuevoRegistro.map(registro => JSON.stringify(registro)).join('\n');
+            gestionArchivo.agregarContenido(contenido);
+
+        } catch (error) {
+            console.error(error);
+
+        }
     }
 
 

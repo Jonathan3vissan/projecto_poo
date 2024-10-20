@@ -1,19 +1,18 @@
 const fs = require('fs');
 const path = require('path');
+const DIRECCION_ARCHIVO_CITA="./agendaCitas/cita.txt"
 class GestorArchivoTexto {
-    constructor(nombreArchivo = "cliente.txt") {
+    constructor(nombreArchivo = "./usuarioRegistrado/registro.txt") {
         this.nombreArchivo = nombreArchivo;
         this.rutaArchivo = path.join(__dirname, this.nombreArchivo);
     }
 
     /**
-     * Método para crear el archivo y agregar contenido
+     *  agregar contenido a usuarioRegistrado/registro.txt
      * @param {*} contenido 
      */
     async agregarContenido(contenido) {
-
         try {
-            await this.verificarArchivo();
             fs.appendFileSync(this.rutaArchivo, contenido + '\n');
             console.log('Contenido agregado exitosamente a:', this.nombreArchivo);
         } catch (error) {
@@ -22,6 +21,23 @@ class GestorArchivoTexto {
     }
 
     /**
+        *  agregar contenido pero solo para agendaCita/cita.txt
+        * @param {*} contenidoDeAgenda 
+        */
+    async aplicaConAgenda(contenidoDeAgenda) {
+        try {
+            fs.appendFileSync(DIRECCION_ARCHIVO_CITA, contenidoDeAgenda + '\n');
+            console.log('Contenido agregado exitosamente a:', DIRECCION_ARCHIVO_CITA);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+
+
+
+
+    /**este no es usadoi todavia
      * @returns verificacion si el archivo existe
      */
     verificarArchivo() {
