@@ -17,29 +17,31 @@ class GestorArchivoTXT {
      * @param {*} cliente Datos del cliente a agregar
      */
     agregarDatoDe(cliente) {
-        fs.appendFile(this.#rutaArchivo, cliente + '\n', (err) => {
-            if (err) {
-                console.error('Error al escribir en el archivo:');
-            } else {
-                console.log('Datos agregados correctamente al archivo.');
-            }
-        });
+        this.guadarDatosDe(cliente,this.#rutaArchivo,"guardado exitoso");
     }
     /**
      * agrega al txt los datos de la agenda
      * @param {string} agenda con los datos de la reserva
      */
     guardarCitaDe(agenda) {
-        fs.appendFile(this.#rutaArchivoAgendados, agenda +'\n', (err) => {
+      this.guadarDatosDe(agenda,this.#rutaArchivoAgendados,"guardado exitomsa la cita")
+    }
+
+/**
+ * guarda un archivo TXT
+ * @param {*} cliente info recibida
+ * @param {*} ruta de guradado
+ * @param {*} mensaje de guardado exitoso
+ */
+    guadarDatosDe(cliente, ruta, mensaje) {
+        fs.appendFile(ruta, cliente + '\n', (err) => {
             if (err) {
-                console.error("error no se puedo escribir en el archivo", err);
-            }
-            else {
-                console.log("Informacion agregada exitosamente ");
+                console.error('Error al escribir en el archivo:');
+            } else {
+                console.log(mensaje);
             }
         });
     }
-
 
 
 

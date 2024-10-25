@@ -1,3 +1,2 @@
-{"Nombre":"Leonal","Mail":"lewo@hot","Telefono":"12456789","IDCliente":"ad3e82f5dc"}
-{"Nombre":"Celete cid","Mail":"lewo@hot","Telefono":"12456789","IDCliente":"bc4280ad96"}
-{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"80b38a2ead"}
+{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"d1251d042d"}
+{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"bb34571b13"}
