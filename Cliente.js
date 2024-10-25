@@ -29,12 +29,7 @@ class Cliente {
      * @returns datos del cliente
      */
     enviarInfoCliente() {
-        const NUEVO_CLIENTE = {
-            Nombre: this.#nombre,
-            Mail: this.#mail,
-            Telefono: this.#telefono,
-        }
-        return NUEVO_CLIENTE
+        return this
     }
 }
 module.exports = Cliente; 

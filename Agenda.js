@@ -1,3 +1,5 @@
+const Cliente = require("./Cliente");
+
 class Agenda {
     #agendado = []
 
@@ -11,7 +13,7 @@ class Agenda {
 
     /**
      * recibe info del cliente y lo envia al array agendados 
-     * @param {*} cliente datos
+     * @param {Cliente} cliente datos
      */
     recibeInfoDe(cliente, gestor) {
         //let agendarCliente = this.#agendado[this.#agendado.length - 1]

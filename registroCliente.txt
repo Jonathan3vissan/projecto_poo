@@ -1,2 +1,1 @@
-{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"d1251d042d"}
-{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"bb34571b13"}
+{"nombre":"Brad Pit","mail":"brat@hot","telefono":"14556789","IDCliente":"eb226d7ebc"}

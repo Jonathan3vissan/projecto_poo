@@ -1,3 +1,7 @@
+const Cliente = require("./Cliente");
+const GeneradorID = require("./GeneradorID");
+const GestorArchivoTXT = require("./GestorArchivoTXT");
+
 class DBCliente {
     #clienteNuevo = "def cliente"
 
@@ -10,16 +14,24 @@ class DBCliente {
 
     /**
      * uniuficar la informacio para ser guardada
-     * @param {*} cliente datos  
-     * @param {*} gestor guarda la info en el txt
-     * @param {*} generadorID crea un id para el cliente
+     * @param {Cliente} cliente datos  
+     * @param {GestorArchivoTXT} gestor guarda la info en el txt
+     * @param {GeneradorID} generadorID crea un id para el cliente
      */
     guardarClienteDB(cliente, gestor, generadorID) {
-        let infoGuardar = "DEf";
-        infoGuardar = cliente.enviarInfoCliente();
-        infoGuardar.IDCliente = generadorID.getID();
-        gestor.agregarDatoDe(JSON.stringify(infoGuardar))
-        this.#clienteNuevo = infoGuardar
+       let clienteNuevo={};
+       clienteNuevo.nombre=cliente.getNombre();
+       clienteNuevo.mail=cliente.getMail();
+       clienteNuevo.telefono=cliente.getTelefono()
+       clienteNuevo.IDCliente = generadorID.getID();
+       gestor.agregarDatoDe(JSON.stringify(clienteNuevo))
+       this.#clienteNuevo = clienteNuevo
+       
+       
+       //let infoGuardar = "DEf";
+       
+       //infoGuardar = cliente.enviarInfoCliente();
+
     }
 
 
