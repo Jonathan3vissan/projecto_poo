@@ -17,7 +17,8 @@ const agendados = new Agenda();
 
 console.log(id_generador.getID());
 base_datos.guardarClienteDB(persona, gestor_txt, id_generador)
-reservas.solicitarInfoA(base_datos, agendados)
+reservas.solicitarInfoA(base_datos, agendados,gestor_txt)
+//agendados.recibeInfoDe(persona,gestor_txt)
 console.log("agendado", agendados.getAgendados());
 
 

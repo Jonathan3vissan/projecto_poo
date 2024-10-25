@@ -8,12 +8,12 @@ class Reserva {
      * @param {*} dbcliente info del cliente
      * @param {*} agenda donde se guardad la reserva
      */
-    solicitarInfoA(dbcliente, agenda) {
+    solicitarInfoA(dbcliente, agenda, gestor) {
         let cliente = "def";
         cliente = dbcliente.getClienteNuevo();
         cliente.fecha = this.#fecha
         cliente.hora = this.#hora
-        agenda.recibeInfoDe(cliente)
+        agenda.recibeInfoDe(cliente, gestor)
     }
 
 

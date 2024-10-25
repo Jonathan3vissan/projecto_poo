@@ -10,11 +10,17 @@ class Agenda {
 
 
     /**
-     * recibe la infomacion completa del cliente y lo agrega al array agendados
-     * @param {*} cliente 
+     * recibe info del cliente y lo envia al array agendados 
+     * @param {*} cliente datos
      */
-    recibeInfoDe(cliente) {
+    recibeInfoDe(cliente, gestor) {
+        //let agendarCliente = this.#agendado[this.#agendado.length - 1]
         this.#agendado.push(cliente)
+        gestor.guardarCitaDe(JSON.stringify(cliente))
+    }
+
+
+    enviarInfoA(gestor) {
     }
 
 }

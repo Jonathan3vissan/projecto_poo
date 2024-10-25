@@ -1,4 +1,3 @@
 {"Nombre":"Leonal","Mail":"lewo@hot","Telefono":"12456789","IDCliente":"ad3e82f5dc"}
 {"Nombre":"Celete cid","Mail":"lewo@hot","Telefono":"12456789","IDCliente":"bc4280ad96"}
-{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"cdcf19703d"}
-{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"d8171769e2"}
+{"Nombre":"Brad Pit","Mail":"brat@hot","Telefono":"14556789","IDCliente":"80b38a2ead"}
