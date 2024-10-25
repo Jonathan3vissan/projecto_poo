@@ -9,7 +9,7 @@ const persona = new Cliente("Brad Pit", "brat@hot", "14556789")
 const id_generador = new GeneradorID();
 const base_datos = new DBCliente();
 const gestor_txt = new GestorArchivoTXT();
-const reservas = new Reserva()
+const reservas = new Reserva("12/02", "12hs", base_datos)
 const agendados = new Agenda();
 
 
@@ -17,9 +17,10 @@ const agendados = new Agenda();
 
 console.log(id_generador.getID());
 base_datos.guardarClienteDB(persona, gestor_txt, id_generador)
-reservas.solicitarInfoA(base_datos, agendados,gestor_txt)
-//agendados.recibeInfoDe(persona,gestor_txt)
+reservas.solicitarInfoA(agendados, gestor_txt)
 console.log("agendado", agendados.getAgendados());
+console.log(reservas.getIDReserva());
+
 
 
 

@@ -26,7 +26,6 @@ class GestorArchivoTXT {
     guardarCitaDe(infoCita) {
         this.#guadarDatosDe(infoCita, this.#rutaArchivoAgendados, "guardado exitomsa la cita")
     }
-
     /**
      * guarda un archivo TXT
      * @param {JSON} datos  recibido
@@ -42,13 +41,40 @@ class GestorArchivoTXT {
             }
         });
     }
+  
+  
+  
+  
+    //nuevo desde aca abajo
 
 
 
+
+    /**
+        * busca le IDCliente en el archivo y si lo encuentra devuelve true
+        * @param {} clienteID 
+        * @returns si encuentra  el IDCLinte dentro del archivo devuelve true
+        */
+   /*  identifidicarEl(clienteID) {
+        let claveBuscada = clienteID.IDgenerado;
+        let verificacion = false;
+        fs.readFile(this.nombreArchivo, 'utf8', (error, data) => {
+            if (error) {
+                console.error("Error al leer el archivo:", error);
+                return;
+            }
+            const lineas = data.split('\n').map(linea => linea.trim());
+            const encontrada = lineas.some(linea => linea.toLowerCase().includes(claveBuscada.toLowerCase()));
+            if (encontrada) {
+                console.log("¡Clave encontrada!");
+                verificacion = true;
+            } else {
+                console.log("Clave no encontrada.");
+                verificacion = false;
+            }
+        });
+        return verificacion
+    }
+ */
 }
-
-
-
-
-
 module.exports = GestorArchivoTXT;
