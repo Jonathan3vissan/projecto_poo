@@ -1,35 +1,31 @@
 class Usuario {
-    #nombre = "def nombre"
-    #mail = "def mail";
-    #telefono = "0";
+    #nombre = "def nombre";
+    #mail = "def mail"
+    #telefono = "def telefono"
     constructor(nombre, mail, telefono) {
         this.#nombre = nombre;
         this.#mail = mail;
         this.#telefono = telefono;
     }
-    /**
-     * @returns el nombre del usuario
-     */
+/**
+ * @returns  nombre de usuario
+ */
     getNombre() {
         return this.#nombre
     }
-    /**
-     * @returns el mail del usuario
-     */
-    getMail() {
+/**
+ * @returns mail del usuario
+ */
+    getMail(){
         return this.#mail
     }
-    /**
-     * @returns el telefono del usuario
-     */
-    getTelefono() {
-        return this.#telefono
-    }
 /**
- * @returns envia los dato del usuario
+ * @returns telefono del usuario
  */
-  
-
-    
+getTelefono(){
+    return this.#telefono
 }
-module.exports = Usuario;
+
+
+}
+module.exports = Usuario
