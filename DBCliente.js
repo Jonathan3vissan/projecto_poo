@@ -1,5 +1,12 @@
 class DBCliente {
+    #clienteNuevo = "def cliente"
 
+    /**
+     * @returns el cliente con toda su informacion
+     */
+    getClienteNuevo() {
+        return this.#clienteNuevo
+    }
 
     /**
      * uniuficar la informacio para ser guardada
@@ -12,6 +19,7 @@ class DBCliente {
         infoGuardar = cliente.enviarInfoCliente();
         infoGuardar.IDCliente = generadorID.getID();
         gestor.agregarDatoDe(JSON.stringify(infoGuardar))
+        this.#clienteNuevo = infoGuardar
     }
 
 

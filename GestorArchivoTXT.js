@@ -6,7 +6,7 @@ class GestorArchivoTXT {
     #rutaArchivo;
 
     constructor() {
-        this.#direccionArchivo = ".registro.txt";
+        this.#direccionArchivo = "registroCliente.txt";
         this.#rutaArchivo = path.join(__dirname, this.#direccionArchivo);
     }
 
